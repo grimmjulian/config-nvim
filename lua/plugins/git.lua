@@ -1,4 +1,4 @@
-return({
+return ({
   {
     "NeogitOrg/neogit",
     dependencies = {
@@ -8,7 +8,7 @@ return({
     },
     config = true,
     keys = {
-      {'<leader>g', vim.cmd.Neogit, desc = "Neogit"}
+      { '<leader>g', vim.cmd.Neogit, desc = "Neogit" }
     }
 
   },
