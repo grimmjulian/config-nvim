@@ -7,5 +7,6 @@ return ({
     require("mini.cursorword").setup()
     require("mini.surround").setup()
     require("mini.ai").setup()
+    require("mini.pairs").setup()
   end
 })
