@@ -1,3 +1,5 @@
+-- Options based on https://www.chiarulli.me/Neovim-2/01-options/
+
 local options = {
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
