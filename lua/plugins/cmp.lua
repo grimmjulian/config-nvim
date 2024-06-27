@@ -9,6 +9,7 @@ return ({ {
   config = function()
     local cmp = require("cmp")
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
+    require("cmp_r").setup({})
     cmp.setup({
       snippet = {
         expand = function(args)
@@ -17,6 +18,7 @@ return ({ {
       },
       sources = ({
         { name = "nvim_lsp" },
+        { name = "cmp_r" },
         { name = "buffer",  keyword_length = 3 },
         { name = "path" }
       }),
