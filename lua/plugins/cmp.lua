@@ -30,7 +30,10 @@ return ({ {
         ['<C-c>'] = cmp.mapping.abort(),
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-      })
+      }),
+      experimental = {
+        ghost_text = true,
+      }
     })
   end
 } })
