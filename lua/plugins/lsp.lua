@@ -24,7 +24,12 @@ return ({
           function(server_name)
             require('lspconfig')[server_name].setup({})
           end,
+          r_language_server = function()
+            local cmd = { "R", "--slave", "-e", "languageserver::run()" }
+            require("lspconfig").r_language_server.setup({ cmd = cmd })
+          end
         },
+
       })
       vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
     end
