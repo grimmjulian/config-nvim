@@ -8,6 +8,8 @@ return ({
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
         lsp_zero.default_keymaps({ buffer = bufnr })
+        local opts = { buffer = bufnr, noremap = true, silent = true }
+        vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, opts)
       end)
       lsp_zero.set_sign_icons({
         error = '✘',
