@@ -1,15 +1,15 @@
-return({
-  {'williamboman/mason.nvim'},
-  {'williamboman/mason-lspconfig.nvim'},
+return ({
+  { 'williamboman/mason.nvim' },
+  { 'williamboman/mason-lspconfig.nvim' },
 
-  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x',
+  { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x',
     config = function()
       local lsp_zero = require('lsp-zero')
 
       lsp_zero.on_attach(function(client, bufnr)
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({buffer = bufnr})
+        lsp_zero.default_keymaps({ buffer = bufnr })
       end)
       lsp_zero.set_sign_icons({
         error = '✘',
@@ -27,13 +27,12 @@ return({
             require('lspconfig')[server_name].setup({})
           end,
         },
-      }) 
+      })
+      vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
     end
   },
-  {'neovim/nvim-lspconfig'},
-  {'hrsh7th/cmp-nvim-lsp'},
-  {'hrsh7th/nvim-cmp'},
-  {'L3MON4D3/LuaSnip'},
+  { 'neovim/nvim-lspconfig' },
+  { 'hrsh7th/cmp-nvim-lsp' },
+  { 'hrsh7th/nvim-cmp' },
+  { 'L3MON4D3/LuaSnip' },
 })
-
-
