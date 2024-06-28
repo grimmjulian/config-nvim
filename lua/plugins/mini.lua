@@ -5,7 +5,9 @@ return ({
     require("mini.statusline").setup()
     require("mini.indentscope").setup()
     require("mini.cursorword").setup()
-    require("mini.surround").setup()
+    require("mini.surround").setup({
+      highlight_duration = 1000
+    })
     require("mini.ai").setup()
     require("mini.pairs").setup()
   end
