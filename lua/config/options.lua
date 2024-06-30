@@ -10,7 +10,7 @@ local options = {
   hidden = true,                          -- required to keep multiple buffers and open multiple buffers
   hlsearch = true,                        -- highlight all matches on previous search pattern
   ignorecase = true,                      -- ignore case in search patterns
-  mouse = "a",                            -- allow the mouse to be used in neovim
+  mouse = "",                             -- disallow the mouse to be used in neovim
   pumheight = 10,                         -- pop up menu height
   showmode = true,                        -- we need to see things like -- INSERT -- anymore
   -- showtabline = 2,                         -- always show tabs
@@ -36,6 +36,7 @@ local options = {
   scrolloff = 8,                          -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",              -- the font used in graphical neovim applications
+  foldmethod = "indent",
 }
 
 vim.opt.shortmess:append "c"
