@@ -18,5 +18,9 @@ return ({
     config = function()
       require("markview").setup();
     end
+  },
+  {
+    'quarto-dev/quarto-nvim',
+    dependencies = { 'jmbuhr/otter.nvim' },
   }
 })
