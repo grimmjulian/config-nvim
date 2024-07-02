@@ -10,5 +10,6 @@ return ({
     })
     require("mini.ai").setup()
     require("mini.pairs").setup()
+    require("mini.hipatterns").setup()
   end
 })
