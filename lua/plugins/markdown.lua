@@ -7,7 +7,9 @@ return ({
     -- MarkdownPreview
     -- MarkdownPreviewStop
     -- MarkdownPreviewToggle
-
+    keys = {
+      { "<leader><leader>p", vim.cmd.MarkdownPreview, desc = "Toggle Markdown Preview" },
+    },
   },
   {
     "OXY2DEV/markview.nvim",
@@ -15,7 +17,6 @@ return ({
       "nvim-tree/nvim-web-devicons", -- Used by the code bloxks
       "nvim-treesitter/nvim-treesitter"
     },
-
     config = function()
       require("markview").setup();
     end
@@ -23,5 +24,9 @@ return ({
   {
     'quarto-dev/quarto-nvim',
     dependencies = { 'jmbuhr/otter.nvim' },
+    ft = { "quarto" },
+    keys = {
+      { "<leader><leader>p", vim.cmd.QuartoPreview, desc = "Toggle Quarto Preview" },
+    },
   },
 })
