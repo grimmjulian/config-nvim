@@ -8,7 +8,7 @@ return ({
     },
     config = true,
     keys = {
-      { '<leader>g', vim.cmd.Neogit, desc = "Neogit" }
+      { '<leader><leader>g', vim.cmd.Neogit, desc = "Neogit" }
     }
 
   },
