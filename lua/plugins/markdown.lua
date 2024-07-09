@@ -22,6 +22,10 @@ return ({
     end
   },
   {
+    "bullets-vim/bullets.vim",
+    ft = { "markdown", "rmarkdown", "quarto" }
+  },
+  {
     'quarto-dev/quarto-nvim',
     dependencies = { 'jmbuhr/otter.nvim' },
     ft = { "quarto" },
