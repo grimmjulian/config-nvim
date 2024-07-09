@@ -11,10 +11,10 @@ return {
     },
     keys = {
       { "<leader>ff", builtin.find_files,  desc = "Find in file names in dir" },
-      { '<leader>fg', builtin.live_grep,   desc = "Find string in files in dir" },
+      { '<leader>fg', builtin.live_grep,   desc = "Find in files in dir" },
       { '<leader>fb', builtin.buffers,     desc = "Find in buffers" },
       { '<leader>fh', builtin.help_tags,   desc = "Find in help tags" },
-      { '<leader>fd', builtin.diagnostics, desc = "Find in diagnostics" },
+      { '<leader>fd', builtin.diagnostics, desc = "Find in help tags" },
     }
   }
 }
