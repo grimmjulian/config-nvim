@@ -25,7 +25,11 @@ return ({
       highlight_duration = 1000
     })
     require("mini.ai").setup()
-    require("mini.pairs").setup()
+    require("mini.pairs").setup({
+      mappings = {
+        ["'"] = { neigh_pattern = '[^a\\#].' }
+      }
+    })
     require('mini.hipatterns').setup(hipatterns_setup())
     require("mini.align").setup()
   end
