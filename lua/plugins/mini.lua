@@ -13,6 +13,7 @@ local hipatterns_setup = function()
   }
 end
 
+local keymap_mdt = function() MiniDiff.toggle_overlay() end
 
 return ({
   'echasnovski/mini.nvim',
@@ -32,5 +33,13 @@ return ({
     })
     require('mini.hipatterns').setup(hipatterns_setup())
     require("mini.align").setup()
-  end
+    require("mini.diff").setup({
+      view = {
+        style = "sign",
+      },
+    })
+  end,
+  keys = {
+    { "<leader>mdt", keymap_mdt, desc = "Toggle Minidiff overlay" }
+  }
 })

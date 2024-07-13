@@ -19,7 +19,8 @@ return ({
     },
     config = function()
       require("markview").setup();
-    end
+    end,
+    enabled = false
   },
   {
     "bullets-vim/bullets.vim",
